@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>AWSCLI</name>
+            <displayName>AWS Client</displayName>
+            <comment>The AWS Command Line Interface is a unified tool to manage your AWS services.
+                With just one tool to download and configure,
+                you can control multiple AWS services from the command line and automate them through scripts.
+            </comment>
+            <version>3.0.1</version>
+            <components>
+                <component>
+                    <name>AWS_CLIENT</name>
+                    <displayName>AWS Client</displayName>
+                    <comment>The AWS Command Line Interface is a unified tool to manage your AWS services.
+                        With just one tool to download and configure,
+                        you can control multiple AWS services from the command line and automate them through scripts.
+                    </comment>
+                    <category>CLIENT</category>
+                    <cardinality>1+</cardinality>
+                    <commandScript>
+                        <script>scripts/aws-cli.py</script>
+                        <scriptType>PYTHON</scriptType>
+                        <timeout>10000</timeout>
+                    </commandScript>
+                    <configFiles>
+                        <configFile>
+                            <type>env</type>
+                            <fileName>aws-client.env</fileName>
+                            <dictionaryName>aws-client-env</dictionaryName>
+                        </configFile>
+                    </configFiles>
+                </component>
+            </components>
+
+            <configuration-dependencies>
+                <config-type>aws-client-env</config-type>
+            </configuration-dependencies>
+            <restartRequiredAfterChange>true</restartRequiredAfterChange>
+
+        </service>
+
+    </services>
+</metainfo>

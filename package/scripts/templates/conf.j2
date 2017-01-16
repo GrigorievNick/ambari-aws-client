@@ -1,0 +1,5 @@
+[default]
+# Custom properties
+{% for key, value in aws_config_custom_properties.items() %}
+{{key}}={{value}}
+{% endfor %}

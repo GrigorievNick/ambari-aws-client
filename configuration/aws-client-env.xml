@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration supports_adding_forbidden="true">
+    <property>
+        <name>app_user</name>
+        <display-name>AWS Client user</display-name>
+        <value>aws-client</value>
+        <property-type>USER</property-type>
+        <description/>
+        <value-attributes>
+            <type>user</type>
+            <overridable>false</overridable>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>user_group</name>
+        <display-name>AWS Client user Group</display-name>
+        <value>hadoop</value>
+        <property-type>GROUP</property-type>
+        <description/>
+        <value-attributes>
+            <type>group</type>
+            <overridable>false</overridable>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>data_dir</name>
+        <value>/var/lib/aws-client</value>
+        <value-attributes>
+            <type>directories</type>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+    <property>
+        <name>download_url</name>
+        <display-name>Url to zip file</display-name>
+        <description>http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-bundle-other-os</description>
+        <value>https://s3.amazonaws.com/aws-cli/awscli-bundle.zip</value>
+    </property>
+    <property>
+        <name>aws_conf_dir</name>
+        <display-name>AWS Client config directory</display-name>
+        <value>~/.aws/</value>
+        <value-attributes>
+            <type>directories</type>
+        </value-attributes>
+        <on-ambari-upgrade add="true"/>
+    </property>
+</configuration>
