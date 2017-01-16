@@ -2,7 +2,7 @@ import com.typesafe.sbt.packager.MappingsHelper._
 
 name := "ambari-aws-client"
 
-version := "1.0"
+version := "1.11.36"
 
 scalaVersion := "2.12.1"
 
